@@ -324,6 +324,7 @@
                             $('#multi_delete_result').html(html);
                             $('#multi_delete').text('Yes Please');
                             setTimeout(function(){
+                                $('#select_all').prop('checked', false);
                                 $('#data-list').DataTable().ajax.reload();                  
                                 $('#confirmMultiModal').modal('hide');
                                 $('#multi_delete_result').html('');

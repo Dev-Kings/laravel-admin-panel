@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class UserPanelController extends Controller
 {
+    public function index(){
+        return view('super-admin.index');
+    }
+    
     public function userPanel()
     {
         $user = User::find(Auth::user()->id);

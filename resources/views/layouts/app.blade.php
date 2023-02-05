@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Company System') }}</title>
+    <title>{{ config('app.name', 'Admin Panel') }}</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -40,7 +40,7 @@
         </main>
     </div>
     <footer class="main-footer text-center">
-        <strong>{{ trans('Company System') }} &copy;</strong>{{ now()->year }} {{ trans('All Rights Reserved') }}
+        <strong>{{ trans('Admin Panel') }} &copy;</strong>{{ now()->year }} {{ trans('All Rights Reserved') }}
     </footer>
 </body>
 

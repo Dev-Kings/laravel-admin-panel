@@ -39,16 +39,6 @@
                         </a>
                     </x-bladewind.card>
 
-                    <x-bladewind.card class="cursor-pointer hover:shadow-gray-300">
-                        <a href="/super-admin/employees-data">
-                            <img src="{{ asset('image/employees.svg') }}" class="w-14 h-14 rounded"><br>
-                            <span class="text-center ...">Employees</span><br>
-                            <span class="text-center ...">
-                                {{ App\Models\Employee::all()->count() }}
-                            </span>
-                        </a>
-                    </x-bladewind.card>
-
                 </div>
 
             </div>

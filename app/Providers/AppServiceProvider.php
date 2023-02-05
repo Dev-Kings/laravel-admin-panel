@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Employee;
-use App\Observers\EmployeeObserver;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -27,6 +25,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         JsonResource::withoutWrapping();
-        Employee::observe(EmployeeObserver::class);
     }
 }

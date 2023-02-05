@@ -6,9 +6,6 @@
                 <div class="flex p-2">
                     <a href="{{ route('super-admin.permissions.create') }}" class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-md">Create Permission</a>
                 </div>
-                {{-- <div class="p-1">
-                    @include('partials._permissionsearch')
-                </div> --}}
                 <div class="flex flex-col">
                     <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
                         <div class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
@@ -50,7 +47,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        {{-- <div class="mt-6 px-4 p-4">{{ $permissions->links() }}</div> --}}
                     </div>
                 </div>
             </div>

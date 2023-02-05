@@ -15,9 +15,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('passport:purge')->monthlyOn(5, '17:00');
-        $schedule->command('backup:clean')->daily()->at('01:00');
-        $schedule->command('backup:run')->daily()->at('01:30');
+        //pass
     }
 
     /**

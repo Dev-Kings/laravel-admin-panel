@@ -47,10 +47,7 @@
                                         </td>
                                         <td>
                                             <div class="flex justify-end p-0.5">
-                                                <div class="flex space-x-2">
-                                                    {{-- <a href="{{ route('super-admin.users.show', $admin->id) }}" class="px-4 py-1 bg-blue-400 hover:bg-blue-600 text-white rounded-md">Roles</a>
-                                                    <a href="#" class="px-4 py-1 bg-blue-400 hover:bg-blue-600 text-white rounded-md">Permissions</a> --}}
-                                                    
+                                                <div class="flex space-x-2">                                                    
                                                     @role('super-admin')
                                                     <form class="px-2 py-0.5 bg-red-400 hover:bg-red-600 text-white rounded-md" method="POST" action="{{ route('super-admin.admins.roles.remove', $admin->id) }}" onsubmit="return confirm('Are you sure you want to deny user the role?');">
                                                         @csrf

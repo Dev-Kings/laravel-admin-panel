@@ -6,9 +6,6 @@
                 <div class="flex p-2">
                     <a href="{{ route('super-admin.roles.create') }}" class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-md">Create Role</a>
                 </div>
-                {{-- <div class="justify-end p-1">
-                    @include('partials._rolesearch')
-                </div> --}}
                 <div class="flex flex-col">
                     <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
                         <div class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
@@ -51,7 +48,6 @@
                                 </tbody>
                             </table>                            
                         </div>
-                        {{-- <div class="mt-6 px-4 p-4">{{ $roles->links() }}</div> --}}
                     </div>
                 </div>
             </div>

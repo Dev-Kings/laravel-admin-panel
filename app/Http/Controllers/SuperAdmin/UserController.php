@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\SuperAdmin;
 
 use Exception;
-use Rules\Password;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
