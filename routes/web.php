@@ -84,7 +84,13 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::get('/', [UserPanelController::class, 'userPanel'])->name('index');
     
     //users
-    Route::get('/users', [UserController::class, 'genericIndex'])->name('users.index');
+    Route::post('/users/save', [UserController::class, 'store'])->name('users.store');
+    Route::get('/user/{id}/edit/', [UserController::class, 'edit'])->name('user.edit');
+    Route::post('/users/edit', [UserController::class, 'update'])->name('user.update');
+    Route::get('/users-data', [UserController::class, 'usersIndex'])->name('users.index');
+    Route::post('users-table', [UserController::class, 'usersTable'])->name('all.users');
+    Route::get('/user/destroy/{id}/', [UserController::class, 'destroy']);
+    Route::get('/delete-users', [UserController::class, 'deleteSelectedUsers'])->name('delete.users');
 });
 
 require __DIR__.'/auth.php';

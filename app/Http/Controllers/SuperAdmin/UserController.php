@@ -26,7 +26,7 @@ class UserController extends Controller
             return view('super-admin.users.datatable');
         }
         if ($user->hasRole('admin')) {
-            return view('admin.employees.datatable');
+            return view('admin.users.datatable');
         }
     }
 
@@ -64,7 +64,7 @@ class UserController extends Controller
     {
         $user = User::find(Auth::user()->id);
 
-        if ($user->hasRole('super-admin')) {
+        if ($user->hasRole('super-admin') || $user->hasRole('admin')) {
 
             $rules = array(
                 'firstname' => ['required', 'string', 'max:255'],
@@ -126,26 +126,6 @@ class UserController extends Controller
             return response()->json(['update_success' => 'User details updated successfully.']);        
     }
 
-    public function genericIndex()
-    {
-        $users = User::latest()->filter(request([
-            'search'
-        ]))->paginate(50);
-
-        return view('users.index', compact('users'));
-    }
-
-    public function rolePlayers()
-    {
-        $user = User::find(Auth::user()->id);
-        if ($user->hasRole('super-admin')) {
-            return view('super-admin.employees.datatable');
-        }
-        if ($user->hasRole('admin')) {
-            return view('admin.employees.datatable');
-        }
-    }
-
     public function deleteSelectedUsers(Request $request)
     {
         $users_id_array = $request->input('id');
@@ -154,7 +134,7 @@ class UserController extends Controller
                 $user = User::findOrFail($user);
                 $user->delete();                
             } catch (Exception $e) {
-                return response()->json(['deletion_error' => 'User(s) data not deleted. Kindly contact IT dept. for help.']);
+                return response()->json(['deletion_error' => 'User(s) data not deleted. Kindly contact developer for help.']);
             }            
         }
         return response()->json(['success' => 'User(s) data deleted.']);                             
@@ -167,17 +147,6 @@ class UserController extends Controller
             ->first()->users;
 
         return view('super-admin.admins.index', compact('admins', 'roles'));
-    }
-
-    public function assignRoles()
-    {
-        $user = User::find(Auth::user()->id);
-        if ($user->hasRole('super-admin')) {
-            return view('super-admin.employees.datatable');
-        }
-        if ($user->hasRole('admin')) {
-            return view('admin.employees.datatable');
-        }
     }
 
     public function assignAdmin()

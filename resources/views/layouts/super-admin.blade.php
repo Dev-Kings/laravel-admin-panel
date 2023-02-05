@@ -23,54 +23,6 @@
     <script src="{{ asset('bladewind/js/helpers.js') }}"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-    <style>
-        .sidebar a {
-            margin-top: 2px;
-            padding-left: 2px;
-            padding-right: 2px;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 600;
-            border-radius: 8px;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidebar a:hover {
-            margin-top: 2px;
-            padding-left: 2px;
-            padding-right: 2px;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 600;
-            border-radius: 8px;
-            background-color: rgb(226 232 240);
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9);
-            display: block;
-        }
-
-        .sidebar a:focus {
-            /* color: grey; */
-            background-color: rgba(255, 255, 255, 0.9);
-            outline: 2px solid transparent;
-            outline-offset: 2px;
-        }
-
-        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-        @media screen and (max-height: 450px) {
-            .sidebar a {
-                font-size: 8px;
-            }
-        }
-    </style>
 </head>
 
 <body class="font-sans antialiased bg-gray-100 dark:bg-gray-300 dark:text-gray-800">
@@ -105,7 +57,7 @@
     <div class="flex-col w-full md:flex md:flex-row md:min-h-screen">
 
         <div @click.away="open = false"
-            class="sidebar flex flex-col flex-shrink-0 w-full text-gray-700 bg-slate-400 md:w-64 dark:text-gray-200 dark:bg-gray-800"
+            class="flex flex-col flex-shrink-0 w-full text-gray-700 bg-slate-400 md:w-64 dark:text-gray-200 dark:bg-gray-800"
             x-data="{ open: false }">
 
             <div class="flex flex-row items-center justify-between flex-shrink-0 px-8 py-4">
