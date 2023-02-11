@@ -1,0 +1,28 @@
+{
+    "name": "dev-kings/laravel-admin-panel",
+    "description": "Laravel admin panel",
+    "license": "MIT",
+    "keywords": ["admin", "laravel","admin-panel","role-based-access","laravel-admin-panel"],
+    "authors": [
+        {
+            "name": "David Kingasia",
+            "homepage": "https://dev-kings.github.io/David-Kingasia/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "spatie/laravel-permission": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevKings\\LaravelAdminPanel\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevKings\\LaravelAdminPanel\\AdminPanelServiceProvider"
+            ]
+        }
+    }
+}
