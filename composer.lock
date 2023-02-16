@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42fa5927bdd2f22eb2a815174bfa81af",
+    "content-hash": "6683b5b3aaf5e27108800f76d1399e0e",
     "packages": [
         {
             "name": "brick/math",
@@ -145,14 +145,21 @@
         {
             "name": "dev-kings/laravel-admin-panel",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Dev-Kings/laravel-admin-panel.git",
+                "reference": "f4130f33d2afbe3853d6ac4bd6093f8ad3185667"
+            },
             "dist": {
-                "type": "path",
-                "url": "packages/dev-kings/laravel-admin-panel",
-                "reference": "307420df48fc502121a905c789c7d6f6684597ee"
+                "type": "zip",
+                "url": "https://api.github.com/repos/Dev-Kings/laravel-admin-panel/zipball/f4130f33d2afbe3853d6ac4bd6093f8ad3185667",
+                "reference": "f4130f33d2afbe3853d6ac4bd6093f8ad3185667",
+                "shasum": ""
             },
             "require": {
                 "spatie/laravel-permission": "^5.5"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -166,6 +173,7 @@
                     "DevKings\\LaravelAdminPanel\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -184,10 +192,11 @@
                 "laravel-admin-panel",
                 "role-based-access"
             ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/Dev-Kings/laravel-admin-panel/issues",
+                "source": "https://github.com/Dev-Kings/laravel-admin-panel/tree/main"
+            },
+            "time": "2023-02-11T07:22:33+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
