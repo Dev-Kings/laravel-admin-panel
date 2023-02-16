@@ -13,7 +13,7 @@
         "doctrine/dbal": "^3.4",
         "flowframe/laravel-trend": "^0.1.1",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.11",
+        "laravel/framework": "^9.19",
         "laravel/tinker": "^2.7",
         "maatwebsite/excel": "^3.1",
         "mkocansey/bladewind": "^1.4",
